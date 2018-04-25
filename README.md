@@ -1,1 +1,1 @@
-#Turn your Node calls to `stdout` pretty colors!
+# Turn your Node calls to `stdout` pretty colors!
