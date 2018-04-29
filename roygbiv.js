@@ -85,7 +85,7 @@ exports.lightGreen = (str) => {
 exports.yellow = (str) => {
 	return addColor(YELLOW, str);
 }
-exports.lightBlue = (STR) => {
+exports.lightBlue = (str) => {
 	return addColor(LIGHT_BLUE, str);
 }
 exports.lightPurple = (str) => {
