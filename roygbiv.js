@@ -16,11 +16,11 @@ const LIGHT_CYAN 		= '\033[1;36m';
 const WHITE 			= '\033[1;37m';
 const NO_COLOR			= '\033[0m';
 const RAINBOW 			= [
-							'red', 
-							'orange', 
-							'yellow', 
-							'green', 
-							'blue', 
+							'red',
+							'orange',
+							'yellow',
+							'green',
+							'blue',
 							'purple'
 						]
 
@@ -101,9 +101,16 @@ exports.noColor = (str) => {
 	return addColor(NO_COLOR, str);
 }
 
+// map() creates a new array by calling the provided function on every element of the calling userInputArray
+// Carrie is probably splitting the string and rejoining it because she wants to use different colors for each of the characters; need to look at the RAINBOW definition to understand
+
 exports.rainbowMe = (str) => {
 	return str.split('').map((x, i) => {
 		var color = RAINBOW[i % RAINBOW.length];
 		return x === ' ' ? x : exports[color](x);
 	}).join('');
+}
+
+exports.babyBlue = (str) => {
+	return addColor(LIGHT_BLUE,str);
 }

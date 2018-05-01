@@ -14,11 +14,15 @@ function evaluateCmd(userInput) {
 		case 'echo':
 			commandLibrary.echo(roy.red(userInputArray.slice(1).join(' ')));
 			break;
-		case 'cat': 
+		case 'cat':
 			commandLibrary.cat(userInputArray.slice(1));
 			break;
 		case 'royecho':
 			commandLibrary.roy(userInputArray.slice(1))
+		case 'babyblue':
+				commandLibrary.babyblue(userInputArray.slice(1))
+		// case 'heybaby':
+		// 		commandLibrary.baby(userInputArray.slice(1))
 	}
 }
 
@@ -38,7 +42,11 @@ const commandLibrary = {
 	},
 	roy: function(userInput) {
 		done(roy.rainbowMe(userInput.join(' ')));
+	},
+	babyblue: function(userInput) {
+		done(roy.babyBlue(userInput));
 	}
+
 };
 
 exports.commandLibrary = commandLibrary;
